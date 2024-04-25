@@ -6,8 +6,8 @@ dotenv.config({path : '../config/config'});
 
 // Route to calculate and return shear stress
 const steelPercentage = (req, res, next) => {
-    const concreteGrades = [20, 25];
-    const steelGrades = [415];
+    const concreteGrades = [15, 20, 25, 30];
+    const steelGrades = [250, 415, 500];
     const dratio = Array.from({ length: 4 }, (_, i) => 0.05 + 0.05 * i);
     const results = [];
 
