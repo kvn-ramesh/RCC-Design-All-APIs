@@ -9,10 +9,12 @@ dotenv.config({path : './config/config.env'});
 const beams = require('./routes/beam.Routes');
 const shear = require('./routes/shear.Routes');
 const doublyBeam = require('./routes/doublyBeam.Routes');
+const footings = require('./routes/footings.Routes');
 
 app.use('/api/v1',beams);
 app.use('/api/v1',shear);
 app.use('/api/v1',doublyBeam);
+app.use('/api/v1',footings);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
